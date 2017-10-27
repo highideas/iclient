@@ -11,6 +11,7 @@ before_script:
 
 script:
     - npm run coverage
+    - npm run codacy
     - codecov
 
 after_success:
