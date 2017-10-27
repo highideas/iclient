@@ -5,7 +5,8 @@
   "scripts": {
     "test": "mocha test",
     "watch": "gulp watch",
-    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha"
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info",
+    "codacy": "./node_modules/.bin/codacy-coverage && rm -rf ./coverage"
   },
   "dependencies": {
     "body-parser": "1.12.4",
